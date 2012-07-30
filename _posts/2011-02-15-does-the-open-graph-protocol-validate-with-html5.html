@@ -1,0 +1,44 @@
+--- 
+tags: 
+- html5
+- opengraphprotocol
+- validation
+- Words
+published: true
+type: post
+status: publish
+title: Does the Open Graph Protocol validate with HTML5?
+layout: post
+meta: 
+  aktt_notify_twitter: "yes"
+  aktt_tweeted: "1"
+  _wp_old_slug: ""
+  _edit_last: "1"
+---
+TL;DR: Not yet.
+
+As far as I can gather, the closest you can get is:
+
+<code>&lt;!DOCTYPE html&gt;
+&lt;html version="HTML+RDFa 1.0"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta property="og:title" content="Test"&gt;
+    &lt;title&gt;Test&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Test&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+
+<blockquote><p>NB. The HTML+RDFa spec is still a working draft, and the W3C HTML5 validator is still experimental. Therefore this will not pass the W3C validator. But this is valid, according to the current spec.</p></blockquote>
+
+&mdash; <a href="http://forum.developers.facebook.net/viewtopic.php?pid=232390#p232390">Source</a>
+
+Useful links:
+
+<ul>
+<li><a href="http://forum.developers.facebook.net/viewtopic.php?id=58384">http://forum.developers.facebook.net/viewtopic.php?id=58384</a> &mdash; "So basically there isn't a way to validate the html with open graph protocol. That sucks."</li>
+<li><a href="http://groups.google.com/group/open-graph-protocol/browse_thread/thread/6fb82768c9d6f575?pli=1">http://groups.google.com/group/open-graph-protocol/browse_thread/thread/6fb82768c9d6f575?pli=1</a> &mdash; "The HTML5 validator did have experimental support for RDFa in HTML5, but this seems to have disappeared now (or at least been hidden from the interface?)"</li>
+<li><a href="http://delrosario.mobi/open-graph-protocol">http://delrosario.mobi/open-graph-protocol</a> &mdash; "HTML5 currently does not validate."</li>
+</ul>

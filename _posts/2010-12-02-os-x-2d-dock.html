@@ -1,0 +1,18 @@
+--- 
+tags: 
+- osx
+- terminal
+- Words
+published: true
+type: post
+status: publish
+title: OS X 2D dock
+layout: post
+meta: 
+  jabber_published: "1291317642"
+  _wp_old_slug: ""
+  _edit_last: "1"
+---
+Every now and then I need this so thought I'd jot it here. The 3D dock on OS X hurts my eyes. Whack this into the terminal to turn it 2D:
+
+<code>defaults write com.apple.dock no-glass -boolean YES; killall Dock</code>

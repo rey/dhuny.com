@@ -1,0 +1,24 @@
+--- 
+tags: 
+- Words
+published: true
+type: post
+status: publish
+title: Troubles installing gems
+layout: post
+meta: 
+  aktt_notify_twitter: "yes"
+  aktt_tweeted: "1"
+  _edit_last: "1"
+---
+I've had this problem with a few machines that I've recently formatted (fresh install of OS X Lion) so I thought I'd jot down the solution for my future sanity.
+
+The problem occurred when trying to install the <a href="https://github.com/mojombo/jekyll">Jekyll</a> gem. After updating my RubyGems it was spitting an error. Peruse my Terminal:
+
+<script src="https://gist.github.com/2083162.js?file=jekyll-gem-solution"></script>
+
+To fix, I went into <a href="http://itunes.apple.com/gb/app/xcode/id497799835?mt=12">Xcode</a>, opened Preferences and clicked Downloads and installed the Command Line Tools.
+
+<img src="http://dhuny.com/wp-content/uploads/2012/03/jekyll-gem-problem.png" alt="jekyll-gem-problem" title="jekyll-gem-problem" width="752" height="529" class="alignnone size-full wp-image-532" />
+
+I found the solution after some Googling but I've mislaid the source. Sorry about that.

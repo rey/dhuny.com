@@ -1,0 +1,10 @@
+permalink: /:year/:month/:title.html
+
+exclude: [".rvmrc", ".rbenv-version", "README", "Rakefile", "changelog.md", "sass_converter.rb", "Gemfile", "Gemfile.lock", ".tm_properties", "config.rb", "sass"]
+
+baseurl: /
+
+title : thanks i could help, bro
+tagline: wub
+author :
+  name : Rey Dhuny
