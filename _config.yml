@@ -1,10 +1,8 @@
 permalink: /:year/:month/:title.html
 
-exclude: [".rvmrc", ".rbenv-version", "README", "Rakefile", "changelog.md", "sass_converter.rb", "Gemfile", "Gemfile.lock", ".tm_properties", "config.rb", "sass", "CNAME"]
+exclude: [".rvmrc", ".rbenv-version", "README", "Rakefile", "changelog.md", "sass_converter.rb", "Gemfile", "Gemfile.lock", ".tm_properties", "config.rb", "sass", "CNAME", "Procfile"]
 
-baseurl: /
-
-title : thanks i could help, bro
-tagline: the internet weblog of Reyhan Dhuny
+title : Dhuny
+tagline: null
 author :
   name : Rey Dhuny

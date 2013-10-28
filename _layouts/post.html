@@ -1,4 +1,9 @@
 ---
 layout: default
 ---
-{% include themes/rey/post.html %}
+<article id="post">
+  <h2>{{ page.title }}</h2>
+  <time datetime="{{ page.date | date : "%Y-%m-%d"}}">{{ page.date | date_to_long_string }}</time>
+  {{ content }}
+</article>
+<!-- end post -->
