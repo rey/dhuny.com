@@ -1,0 +1,66 @@
+#!/bin/bash
+
+# qq.sh
+# This is a quick and dirty way to install my dot files on a vanilla operating system running a bash shell.
+#
+# To use
+# wget https://dhuny.com/qq; bash qq
+# 
+# To uninstall
+# crontab -r; rm -rf ~/.dot ~/.vim ~/.tmux; rm ~/.bashrc ~/.bash_profile ~/.gitconfig ~/.gitignore_global ~/.inputrc ~/.profile ~/.tmux.conf ~/.vimrc; logout
+
+echo
+echo "This will install Rey's terminal environment!"
+echo
+echo "It'll do the following:"
+echo "  1/ Install vim, git and tmux (if not already installed)"
+echo "  2/ Clone my .dot, .vim and .tmux repos and create symlinks"
+echo
+read -p "Are you sure? [y/n]" -n 1 -r
+
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+  echo
+  cd ~ && pwd
+
+  if [[ "$(uname)" == "Darwin" ]]; then
+    install_prefix_command="brew"
+  elif [[ "$(uname)" == "Linux" ]]; then
+    install_prefix_command="sudo apt-get"
+  else
+    echo
+    echo "ERROR: This isn't a Darwin or Linux operating system. Exiting.."
+  fi
+
+  echo
+  echo "INFO: This seems to be a $(uname) operating system. Onwards!"
+
+  echo
+  echo "INFO: Installing software"
+  echo
+  ${install_prefix_command} install \
+    vim \
+    git \
+    tmux
+
+  echo
+  echo "INFO: Installing .dot files"
+  echo
+  git clone https://github.com/rey/.dot.git
+  bash ~/.dot/install.sh
+  echo
+  echo "INFO: Installing .vim files"
+  echo
+  git clone https://github.com/rey/.vim.git
+  bash ~/.vim/install.sh
+  echo
+  echo "INFO: Installing .tmux files"
+  echo
+  git clone https://github.com/rey/.tmux.git
+  bash ~/.tmux/install.sh
+  echo
+  echo "INFO: Done! Activate by running the following command:"
+  echo "  source ~/.bashrc"
+else
+  echo "Exiting.."
+fi
